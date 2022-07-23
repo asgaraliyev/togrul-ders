@@ -1,5 +1,6 @@
 *{
     margin:0;
+    box-sizing: border-box;
     padding: 0;
 }
 body{
@@ -14,6 +15,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 1em 6em;
+    border-bottom: 0.5px solid rgba(97, 95, 95, 0.5);
 }
 
 header .left-side{
@@ -22,15 +24,23 @@ header .left-side{
 header .right-side{ 
     display: flex;
 }
-header .right-side ul{
+header .right-side .parent-ul{
     list-style: none;
     display: flex;
     align-items: center;
 }
-header .right-side li{
+header .right-side .parent-li{
     display: inline-block;
+    color: #666;
+    cursor: pointer;
+    margin: 0em 1em;
+    transition: 0.3s ease;
+    /* position: relative; */
 }
 
+header .right-side li:hover{
+    color: black;
+}
 header .right-side button{
     border: none;
     background-color: white;
@@ -39,11 +49,22 @@ header .right-side button{
     border:0.1em solid #80808036 ;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 header .right-side button:hover{
-    border: none;
+    border-color: transparent;
     box-shadow: 2px 8px 78px -13px rgba(0,0,0,0.75);
 -webkit-box-shadow: 2px 8px 78px -13px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 8px 78px -13px rgba(0,0,0,0.75);
+}
+
+header .left-side img{
+    width: 3em;
+}
+header .right-side li ul{
+    position: absolute;
+    top: 69px;
+    left: 0;
+    background: red;
 }
